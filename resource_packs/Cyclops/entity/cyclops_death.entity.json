@@ -1,0 +1,30 @@
+{
+  "format_version": "1.8.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "lunae:cyclops_death",
+      "materials": { "default": "entity_alphatest" },
+      "textures": {
+        "default": "textures/cyclops"
+      },
+      "geometry": {
+        "default": "geometry.Cyclops"
+      },
+	  "animations":{
+	  "death": "animation.Cyclops.death",
+	  "death_stay": "animation.Cyclops.death.stay"
+	  },
+	  "scripts":{
+		"scale": "2"
+	  },
+	  "animation_controllers":[
+	  {	"death": "controller.animation.cyclops.death"}
+	  ],
+      "render_controllers": [ "controller.render.bat" ],
+      "spawn_egg": {
+        "texture": "spawn_egg",
+        "texture_index": 18
+      }
+    }
+  }
+}

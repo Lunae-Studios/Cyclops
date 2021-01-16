@@ -1,0 +1,8 @@
+{
+	"lunae.battle": {
+		"category": "neutral",
+		"sounds": [
+			"sounds/lunae/battle"
+		]
+	}
+}

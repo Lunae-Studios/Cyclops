@@ -1,0 +1,24 @@
+{
+    "format_version": 2,
+    "header": {
+        "description": "Cyclops",
+        "name": "Cyclops",
+        "uuid": "5fadc986-f0f8-46b8-b47e-eed4a3c74765",
+        "version": [ 0, 0, 1 ],
+        "min_engine_version": [ 1, 14, 0 ]
+    },
+    "modules": [
+        {
+            "description": "Example vanilla behavior pack",
+            "type": "data",
+            "uuid": "fa6e90c8-c925-460f-8155-c8a60b753caa",
+            "version": [0, 0, 1]
+        }
+    ],
+    "dependencies": [
+        {
+            "uuid": "8b17ce7e-8be2-462e-8313-dc674dc7d0ee",
+            "version": [0, 0, 1]
+        }
+    ]
+}

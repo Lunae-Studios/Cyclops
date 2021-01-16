@@ -1,0 +1,7 @@
+book.cyclops.image= 
+entity.lunae:cyclops_skull.name=Cyclops Skull 
+entity.lunae:cyclops_first.name=Cyclops
+entity.lunae:cyclops_second.name=Cyclops
+entity.lunae:cyclops_third.name=Cyclops
+item.lunae:stardust.name=Startdust Sword
+item.spawn_egg.entity.lunae:skull.name= Cyclops Skull

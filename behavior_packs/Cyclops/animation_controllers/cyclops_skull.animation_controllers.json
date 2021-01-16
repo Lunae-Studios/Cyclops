@@ -1,0 +1,23 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.skull.summon_event": {
+      "initial_state": "default",
+      "states": {
+        "default": {
+          "transitions": [
+            {
+              "heal": "query.is_powered"
+            }
+          ]
+        },
+        "heal": {
+          "on_entry": [
+            "/function arena",
+            "/playsound lunae.battle @p"
+          ]
+        }
+      }
+    }
+  }
+}
