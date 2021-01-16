@@ -1,0 +1,85 @@
+{
+  "namespace": "debug_screen",
+  "access_button@common_buttons.light_content_button": {
+    "$pressed_button_name": "button.access",
+    "size": [
+      20,
+      20
+    ],
+    "offset": [
+      20,
+      20
+    ],
+    "anchor_to": "top_right",
+    "anchor_from": "top_right",
+    "bindings": [
+      {
+        "binding_name": "#access_screen_visible",
+        "binding_name_override": "#visible"
+      }
+    ]
+  },
+  "lunae_watermark": {
+    "type": "label",
+    "text": "§l§m§8Cyclops Addon§r §ev1.0§r\n By §e@Lunae_Studios§r\n §dlunaestudios.ml",
+    "color": [
+      1,
+      1,
+      1
+    ],
+    "shadow": true,
+    "font_size": "small",
+    "anchor_from": "top_right",
+    "anchor_to": "top_right",
+    "alpha": 10
+  },
+  "lunae_image": {
+    "type": "image",
+    "texture": "logo/lunae",
+    "layer": 3,
+    "offset": [
+      -55,
+      -2.5
+    ],
+    "anchor_from": "top_right",
+    "anchor_to": "top_right",
+    "size": [
+      16,
+      16
+    ]
+  },
+  "content_panel": {
+    "type": "panel",
+    "clips_children": false,
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "controls": [
+      {
+        "access_button@debug_screen.access_button": {}
+      },
+           {
+        "lunae_watermark@debug_screen.lunae_watermark": {}
+      },
+      {
+        "lunae_image@debug_screen.lunae_image": {}
+      }
+    ]
+  },
+  "debug_screen@common.base_screen": {
+    "send_telemetry": false,
+    "screen_not_flushable": true,
+    "render_game_behind": true,
+    "is_showing_menu": false,
+    "low_frequency_rendering": true,
+    "is_modal": true,
+    "should_steal_mouse": false,
+    "render_only_when_topmost": false,
+    "screen_draws_last": true,
+    "always_accepts_input": true,
+    "$screen_content": "debug_screen.content_panel",
+    "$screen_animations": [],
+    "$use_loading_bars": false
+  }
+}

@@ -1,0 +1,10 @@
+db/
+gi
+level.dat
+level.dat_old
+levelname.txt
+world
+world_behaviour_pack_history.json
+world_behaviour_pack.json
+world_resource_pack_history.json
+world_resource_pack.json

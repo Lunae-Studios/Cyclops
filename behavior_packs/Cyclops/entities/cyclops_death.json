@@ -1,0 +1,59 @@
+{
+  "format_version": "1.16.0",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "lunae:cyclops_death",
+      "is_spawnable": true,
+      "is_summonable": true,
+      "is_experimental": false,
+	   "scripts": {
+        "animate": [
+          "cyclops"
+        ]
+      },
+      "animations": {
+        "cyclops": "controller.animation.cyclops.death"
+      }
+    },
+    "component_groups": {
+		"stay":{
+			"minecraft:is_saddled":{}
+		}
+    },
+
+    "components": {
+	 "minecraft:experience_reward": {
+		"on_death": "query.last_hit_by_player ? 5 + (query.equipment_count * Math.Random(1,3)) : 0"
+        },
+		"minecraft:health":{
+			"value":1
+		},
+			"minecraft:timer": {
+          "time": [ 8,8 ],
+          "looping": false,
+          "time_down_event": {
+            "event": "stay",
+            "target": "self"
+          }
+        },
+		"minecraft:knockback_resistance": {
+        "value": 1.0
+      },
+	"minecraft:damage_sensor": {
+        "triggers": {
+          "cause": "all",
+          "deals_damage": false
+        }
+      },
+	   "minecraft:nameable": {},
+      "minecraft:physics": {}
+	  },
+
+    "events": {	
+		"stay":{
+			"add":{"component_groups":["stay"]}
+		}
+    }
+  
+}
+}

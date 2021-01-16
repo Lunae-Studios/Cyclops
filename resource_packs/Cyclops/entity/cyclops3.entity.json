@@ -1,0 +1,37 @@
+{
+  "format_version": "1.8.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "lunae:cyclops_final",
+      "materials": { "default": "entity_alphatest" },
+      "textures": {
+        "default": "textures/cyclops"
+      },
+	  "scripts":{
+		"scale": "2",
+		"pre_animation": [
+			"variable.tcos0 = (math.cos(query.modified_distance_moved * 15) * query.modified_move_speed / variable.gliding_speed_value) * 40;"
+		]
+	  },
+      "geometry": {
+        "default": "geometry.Cyclops"
+      },
+	  "animations":{
+	  "stunned": "animation.Cyclops.stun",
+	  "on_death": "animation.Cyclops.death",
+	  "attack": "animation.Cyclops.attack",
+	  "move": "animation.cyclops.move"
+	  },
+	  "animation_controllers":[
+	  {"attacking": "controller.animation.cyclops.attack"},
+	  {"move": "controller.animation.cyclops.move"},
+	  {"stunned": "controller.animation.cyclops.stunned"}
+	  ],
+      "render_controllers": [ "controller.render.bat" ],
+      "spawn_egg": {
+        "texture": "spawn_egg",
+        "texture_index": 18
+      }
+    }
+  }
+}

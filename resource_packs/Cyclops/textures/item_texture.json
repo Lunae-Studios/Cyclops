@@ -1,0 +1,11 @@
+{
+   "resource_pack_name" : "vanilla",
+   "texture_data" : {
+     "stardust" : {
+       "textures" : [
+         "textures/cyclops/stardust"
+         ]
+     }
+   },
+   "texture_name" : "atlas.items"
+}

@@ -1,0 +1,23 @@
+{
+  "format_version": "1.8.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "lunae:cyclops_skull",
+      "materials": { "default": "entity_alphatest" },
+      "textures": {
+        "default": "textures/cyclops"
+      },
+      "geometry": {
+        "default": "geometry.Cyclops_skull"
+      },
+	  "scripts":{
+		"scale": "2"
+	  },
+      "render_controllers": [ "controller.render.bat" ],
+      "spawn_egg": {
+        "texture": "cyclops_skull",
+        "texture_index": 18
+      }
+    }
+  }
+}

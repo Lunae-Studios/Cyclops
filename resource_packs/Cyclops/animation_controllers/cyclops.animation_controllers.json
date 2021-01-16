@@ -1,0 +1,81 @@
+{
+	"format_version" : "1.10.0",
+	"animation_controllers" : {
+		"controller.animation.cyclops.attack" : {
+			"initial_state" : "default",
+			"states" : {
+				"default" : {
+					"transitions" : [
+						{
+							"attack" : "query.is_delayed_attacking"
+						}
+					]
+				},
+				"attack" : {
+					"animations" : [ "attack" ],
+					"transitions" : [
+						{
+							"default" : "!query.is_delayed_attacking"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.cyclops.stunned" : {
+			"initial_state" : "default",
+			"states" : {
+				"default" : {
+					"transitions" : [
+						{
+							"stunned" : "query.is_stunned"
+						}
+					]
+				},
+				"stunned" : {
+					"animations" : [ "stunned" ],
+					"transitions" : [
+						{
+							"default" : "!query.is_stunned"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.cyclops.move" : {
+			"initial_state" : "default",
+			"states" : {
+				"default" : {
+					"transitions" : [
+						{
+							"move" : "query.is_moving"
+						}
+					]
+				},
+				"move" : {
+					"animations" : [ "move" ],
+					"transitions" : [
+						{
+							"default" : "!query.is_moving"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.cyclops.death" : {
+			"initial_state" : "default",
+			"states" : {
+				"default" : {
+					"animations" : [ "death" ],
+					"transitions" : [
+						{
+							"stay_death" : "query.is_saddled"
+						}
+					]
+				},
+				"stay_death" : {
+					"animations" : [ "death_stay" ]
+				}
+			}
+		}
+	}
+}
